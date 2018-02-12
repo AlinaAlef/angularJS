@@ -6,91 +6,95 @@
     <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular-sanitize.js"></script>
     <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.5.0.js"></script>
     <script src="example.js"></script>
+    <!--<link rel="stylesheet" type="text/css"-->
+          <!--href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>-->
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../app.css">
 </head>
 <body>
 
 <div ng-controller="AccordionDemoCtrl">
+    <fa name="cog" animation="spin"></fa>
 
-
-</div><div class="accordion-filter">
-    <uib-accordion close-others="oneAtATime">
-        <div uib-accordion-group class="panel-default" is-open="status.mainTimeFilter">
-            <uib-accordion-heading>
-                Q1, First Half (2016-2017) <i class="pull-right glyphicon"
-                                              ng-class="{'glyphicon-chevron-down': status.mainTimeFilter, 'glyphicon-chevron-right': !status.mainTimeFilter}"></i>
-            </uib-accordion-heading>
-            <div uib-accordion-group class="panel-default" is-open="status.quarters">
+    <div class="accordion-filter">
+        <uib-accordion close-others="oneAtATime">
+            <div uib-accordion-group class="panel-default" is-open="status.mainTimeFilter">
                 <uib-accordion-heading>
-                    ALL QUARTERS <i class="pull-right glyphicon"
-                                    ng-class="{'glyphicon-chevron-down': status.quarters, 'glyphicon-chevron-right': !status.quarters}"></i>
+                    Q1, First Half (2016-2017) <i class="pull-right glyphicon"
+                                                  ng-class="{'glyphicon-chevron-down': status.mainTimeFilter, 'glyphicon-chevron-right': !status.mainTimeFilter}"></i>
                 </uib-accordion-heading>
-                <div class="panel-element">
-                    <div>
-                        <label class="css-label">
-                            <input type="checkbox" id="valueCheck1"/>
-                            <i class="css-checkbox"></i>Q1
-                        </label>
+                <div uib-accordion-group class="panel-default" is-open="status.quarters">
+                    <uib-accordion-heading>
+                        ALL QUARTERS <i class="pull-right glyphicon"
+                                        ng-class="{'glyphicon-chevron-down': status.quarters, 'glyphicon-chevron-right': !status.quarters}"></i>
+                    </uib-accordion-heading>
+                    <div class="panel-element">
+                        <div>
+                            <label class="css-label">
+                                <input type="checkbox" id="valueCheck1"/>
+                                <i class="css-checkbox"></i>Q1
+                            </label>
+                        </div>
+                        <div>
+                            <label class="css-label">
+                                <input type="checkbox" id="valueCheck2"/>
+                                <i class="css-checkbox"></i>Q2
+                            </label>
+                        </div>
+                        <div>
+                            <label class="css-label">
+                                <input type="checkbox" id="valueCheck3"/>
+                                <i class="css-checkbox"></i>Q3
+                            </label>
+                        </div>
+                        <div>
+                            <label class="css-label">
+                                <input type="checkbox" id="valueCheck4"/>
+                                <i class="css-checkbox"></i>Q4
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                        <label class="css-label">
-                            <input type="checkbox" id="valueCheck2"/>
-                            <i class="css-checkbox"></i>Q2
-                        </label>
+                </div>
+                <div uib-accordion-group class="panel-default" is-open="status.halves">
+                    <uib-accordion-heading>
+                        BOTH HALVES <i class="pull-right glyphicon"
+                                       ng-class="{'glyphicon-chevron-down': status.halves, 'glyphicon-chevron-right': !status.halves}"></i>
+                    </uib-accordion-heading>
+                    <div class="panel-element">
+                        <div>
+                            <label class="css-label">
+                                <input type="checkbox" id="value"/>
+                                <i class="css-checkbox"></i>First Half
+                            </label>
+                        </div>
+                        <div>
+                            <label class="css-label">
+                                <input type="checkbox" id="value2"/>
+                                <i class="css-checkbox"></i>Second Half
+                            </label>
+                        </div>
                     </div>
-                    <div>
-                        <label class="css-label">
-                            <input type="checkbox" id="valueCheck3"/>
-                            <i class="css-checkbox"></i>Q3
-                        </label>
+                    <div class="panel-container">
+                        <select class="select-element">
+                            <option>2017</option>
+                        </select>
+                        <span class="padding_2"> to </span>
+                        <select class="select-element">
+                            <option>2018</option>
+                        </select>
                     </div>
-                    <div>
-                        <label class="css-label">
-                            <input type="checkbox" id="valueCheck4"/>
-                            <i class="css-checkbox"></i>Q4
-                        </label>
+                    <div class="panel-element">
+                        <div>
+                            <label class="css-label">
+                                <input type="checkbox" id="valueCheck"/>
+                                <i class="css-checkbox"></i>ALL PERIODS
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div uib-accordion-group class="panel-default" is-open="status.halves">
-                <uib-accordion-heading>
-                    BOTH HALVES <i class="pull-right glyphicon"
-                                   ng-class="{'glyphicon-chevron-down': status.halves, 'glyphicon-chevron-right': !status.halves}"></i>
-                </uib-accordion-heading>
-                <div class="panel-element">
-                    <div>
-                        <label class="css-label">
-                            <input type="checkbox" id="value"/>
-                            <i class="css-checkbox"></i>First Half
-                        </label>
-                    </div>
-                    <div>
-                        <label class="css-label">
-                            <input type="checkbox" id="value2"/>
-                            <i class="css-checkbox"></i>Second Half
-                        </label>
-                    </div>
-                </div>
-                <div class="panel-container">
-                    <select class="select-element">
-                        <option>2017</option>
-                    </select>
-                    <span class="padding_2"> to </span>
-                    <select class="select-element">
-                        <option>2018</option>
-                    </select>
-                </div>
-                <div class="panel-element">
-                    <div>
-                        <label class="css-label">
-                            <input type="checkbox" id="valueCheck"/>
-                            <i class="css-checkbox"></i>ALL PERIODS
-                        </label>
-                    </div>
-                </div>
-            </div>
-    </uib-accordion>
+        </uib-accordion>
+    </div>
 </div>
 </body>
 </html>
